@@ -11,12 +11,14 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'), // 更动通知
     cache = require('gulp-cache'), //图片快取，只有更改过的图片会进行压缩
-    livereload = require('gulp-livereload'); // 即时重整
+    livereload = require('gulp-livereload'), // 即时重整
+    plumber = require('gulp-plumber'); // 异常处理
 
 // less编译-兼容-压缩-通知
 gulp.task('less', function() {
     gulp.src('less/*.less')
         .pipe(less())
+        .pipe(plumber({errorHandler:notify.onError('Error:<%= error.message%>')}))
         .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
         .pipe(gulp.dest('css/'))
         .pipe(rename({
