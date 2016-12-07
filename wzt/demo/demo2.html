@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>数据典型脚手架a</title>
+
+    <!--引入组件必需-->
+    <link rel="stylesheet" href="//g.alicdn.com/??cui/cui/0.2.2/css/all.css">
+    <script src="//g.alicdn.com/cn/jquery/1.8.1/jquery.js"></script>
+
+    <!-- 数据业务组件seed,仅使用图表库可不引入 -->
+    <script src="//g.alicdn.com/fi/bui/seed-min.js"></script>
+
+    <script src="//g.alicdn.com/cn/seajs/2.3.0/seajs-combo.js"></script>
+    <script src="//g.alicdn.com/cui/cui/0.2.2/cui.js"></script>
+
+    <!-- 仅仅使用图表组件,引用widget.css即可 -->
+    <link rel="stylesheet" href="//g.alicdn.com/cn/data-dpl/1.2.0/widget/css/widget-all.css" />
+
+
+    <!-- 数据组件seajs配置文件 -->
+    <script src="//g.alicdn.com/cn/data-dpl/1.2.8/config.js"></script>
+
+</head>
+<body>
+
+<!-- 头部导航 -->
+<div class="topbar">
+    <div class="logo">
+        <div class="image"></div>
+        <div class="text">
+            <span>菜鸟数据脚手架</span>
+            <b>beta版</b>
+        </div>
+    </div>
+    <ol class="tabs">
+        <li>
+            <a href="/">首页</a>
+        </li>
+        <li  class="active"  >
+            <a href="/plan/v2/fenboPlan.htm">导航1</a>
+        </li>
+
+        <li >
+            <a href="/realTime/v2/totalMonitor.htm">导航2</a>
+        </li>
+
+    </ol>
+    <div class="info">
+        <a href="#">产品反馈</a>
+        <span>Hi, 未时</span>
+        <a href="#" class="cp-logout">退出</a>
+    </div>
+</div>
+
+<div class="leftbar"
+     data-nodes='[{"text":"菜单1",
+                   "show_seq":1,
+                   "icon":"icon-xiaoshougongshi",
+                   "expanded":true,
+                   "children":[{"show_seq":1,
+                                "text":"子菜单1",
+                                "href":"#",
+                                "selected":false
+                                },
+                                {"show_seq":1,
+                                "text":"子菜单2",
+                                "href":"#",
+                                "selected":false
+                                }]
+                },{"text":"菜单2",
+                   "show_seq":1,
+                   "icon":"icon-xiaoshougongshi",
+                   "expanded":true,
+                   "children":[{"show_seq":1,
+                                "text":"子菜单1",
+                                "href":"#",
+                                "selected":true
+                                }]
+                }]'>
+</div>
+
+
+<div class="content">
+
+    <!-- 容器 -->
+    <div class="can">
+        <div class="box-title"><h3>Hello world</h3></div>
+        <!-- 页面内容 start-->
+        <div class="form-bar" id="f1" data-widget="widget/info/formBar">
+            <form onsubmit="return false">
+                <ul class="toolbar">
+                    <li>
+                        <!-- 第一种下拉框生成方式,通过原始方式生成 -->
+                        <select name="22"  data-combo="a" data-multiple="true">
+                            <option value="ok">ok</option>
+                            <option value="ok1">ok1</option>
+                            <option value="ok2">ok2</option>
+                        </select>
+                    </li>
+                    <li>
+                        <!-- 第二种下拉框生成方式,通过url异步生成 -->
+                        <select name="22"  id="a" data-url="json/select.json"></select>
+                    </li>
+                    <li>
+                        <input type="text" class="calendar" name="date"/>
+                    </li>
+                    <li>
+                        <input type="text" class="address" data-province="provinceId" name="address"/>
+                        <input type="hidden" id="provinceId" name="province"/>
+                    </li>
+                    <li>
+                        <div class="search-name">
+                            <input type="text" name="name" placeholder="检索花名,姓名" >
+                        </div>
+                    </li>
+
+                </ul>
+                <div class="submit"><buttton class="button button-primary">检索</buttton></div>
+            </form>
+        </div>
+
+        <div id="c1"
+             data-form="f1"
+             data-tab="[{text:'ok',value:'o',selected:true},{text:'ok1',value:'k'}]"
+             data-widget="chart/chart"
+             data-data-url="json/chart.json"></div>
+
+
+        <div data-form="f1" data-widget="widget/info/table"
+             data-drop-field="store_code"
+             data-drop-url="json/table.json"
+             data-url="json/table.json"
+             data-setting="true"
+             data-download-url="./随便一个下载的url.php"
+             data-page-size="20"></div>
+
+
+        <!-- 页面内容 end-->
+    </div>
+
+</div>
+
+
+</body>
+<script>
+    //组件解析引擎初始化
+    seajs.use("widget/widget", function (W) {
+        new W()
+    });
+    //脚手架初始化
+    seajs.use("dataDPL/common/base");
+</script>
+</html>

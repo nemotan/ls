@@ -1,0 +1,18 @@
+{
+  "success":true,
+  "data":{
+    "yAxis":[
+      {
+        "data":[2,4,5,7],
+        "name":"chart2",
+        "type":"bar"
+      },{
+        "data":[2,4,5,7],
+        "type":"line",
+        "name":"chart3"
+      }
+    ],
+    "xAxis":["一","二","三","四"]
+  }
+
+}

@@ -1,0 +1,75 @@
+{
+  "data": {
+    "dataMapList": [
+      {
+        "store_code": "STORE_1228938",
+        "to_province_code": "0",
+        "sell_order_num_sum": 29375.85,
+        "capacity_sum": 70602,
+        "rate": 41.61,
+        "store_name": "心怡武汉商超仓",
+        "to_province_name": "<a class='drop-text'>编辑<a/>"
+      },
+      {
+        "store_code": "STORE_1228938",
+        "to_province_code": "1",
+        "sell_order_num_sum": 44829.03,
+        "capacity_sum": 105060,
+        "rate": 42.67,
+        "store_name": "心怡武汉商超仓",
+        "to_province_name": "<a class='drop-text'>下探<a/>"
+      },
+      {
+        "store_code": "STORE_823547",
+        "to_province_code": "2",
+        "sell_order_num_sum": 37871.8,
+        "capacity_sum": 73176,
+        "rate": 51.75,
+        "store_name": "心怡成都商超仓",
+        "to_province_name": "<a class='drop-text'>未填写<a/>"
+      },
+      {
+        "store_code": "ALOG-0003",
+        "to_province_code": "3",
+        "sell_order_num_sum": 312316.57,
+        "capacity_sum": 600000,
+        "rate": 52.05,
+        "store_name": "心怡天津商超仓",
+        "to_province_name": "<a class='drop-text'>北京<a/>"
+      },
+      {
+        "store_code": "STORE_823547",
+        "to_province_code": "2",
+        "sell_order_num_sum": 10906.37,
+        "capacity_sum": 20394,
+        "rate": 53.48,
+        "store_name": "心怡成都商超仓",
+        "to_province_name": "<a class='drop-text'>新疆<a/>"
+      }
+    ],
+    "fieldName": ["一","二","三","四","五","六","七"],
+    "fields": [
+      "store_code",
+      "to_province_code",
+      "sell_order_num_sum",
+      "capacity_sum",
+      "rate",
+      "store_name",
+      "to_province_name"
+    ],
+    "defaultShowFields":[
+      "store_code",
+      "to_province_code",
+      "sell_order_num_sum",
+      "capacity_sum",
+      "rate",
+      "store_name",
+      "to_province_name"
+    ],
+    "submitFields":["store_code","to_province_code"],
+    "pageSize": 5,
+    "totalCount": 130,
+    "sortFields":["store_code","to_province_code"]
+  },
+  "success": true
+}
